@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :project_management_example, ProjectManagementExample.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "postgres_dev",
+  password: "postgres_dev",
   database: "project_management_example_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
