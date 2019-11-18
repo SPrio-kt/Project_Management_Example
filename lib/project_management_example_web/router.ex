@@ -13,7 +13,10 @@ defmodule ProjectManagementExampleWeb.Router do
     plug :accepts, ["json"]
   end
 
-  
+  pipeline :json_api do
+    plug :accepts, ["json-api"]
+    plug JaSerializer.Deserializer
+  end
   # Other scopes may use custom stacks.
   scope "/api", ProjectManagementExampleWeb do
     pipe_through :api
