@@ -12,7 +12,7 @@ database_url =
     """
 
 config :project_management_example, ProjectManagementExample.Repo,
-  # ssl: true,
+  ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
