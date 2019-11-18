@@ -13,10 +13,12 @@ defmodule ProjectManagementExampleWeb.Router do
     plug :accepts, ["json"]
   end
 
+  
   # Other scopes may use custom stacks.
   scope "/api", ProjectManagementExampleWeb do
     pipe_through :api
 
     resources "/projects", ProjectController, only: [:index, :show]
+    resources "/documents", DocumentController, only: [:index, :show, :create]
   end
 end
